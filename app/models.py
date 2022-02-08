@@ -1,3 +1,10 @@
-import json
+import datetime
 from pydantic import BaseModel
-from typing import Any
+
+
+class ReceiptResponse(BaseModel):
+    merchant: str
+    category: str
+    date: datetime.date
+    time: datetime.time
+    total: float
