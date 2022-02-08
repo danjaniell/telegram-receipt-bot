@@ -59,7 +59,6 @@ def received_photo(message: types.Message):
     photo = urlopen(url)
     data = parse_receipt(photo)
     bot_instance.reply_to(message, text=format_response(data))
-    bot_instance.typ
     bot_instance.send_message(
         message.chat.id, text=f"AddExp {data.total} {data.merchant}-{data.category}"
     )
